@@ -2,31 +2,16 @@ package main
 
 import "fmt"
 
-func sum(numbers ...int) int{
-	r := 0
-	for _ , number := range numbers {
-		r = r + number
-	}
-	return r
-}
-
 func main(){
-	//var inhaArray [7] string //array
-//	var inhaSlice [] string //slice
-//	inhaSlice = make([]string, 7)
-	inhaSlice := []string{"i","n","h","a" }
-        nums := []int{1, 2, 3, 4, 5}
-//	inhaSlice[0] = "i"
-//	inhaSlice[1] = "n"
-//	inhaSlice[2] = "h"
-//	inhaSlice[3] = "a"
-
-	for i := 0 ; i < len(inhaSlice); i++ {
-		fmt.Println(inhaSlice[i])
-	}
-	fmt.Println(sum(1,5,3))
-	fmt.Println(sum(3,1))
-	fmt.Println(sum(nums...))
-
-//	fmt.Println(1)
+	//array1 := [5]string{"i","n","h","a","!"}
+	array3 := [5]string{"a","b","c","d","e"}
+	slice3 := array3[0:3]
+	slice4 := array3[2:5]
+	fmt.Println(slice3, slice4)
+	//array3[2] = "z"
+	array3[2] = "Queen"
+	//slice1 := array1[2:5]
+	fmt.Println(slice3, slice4)
+	fmt.Println(array3)
+	//fmt.Println(slice1)
 }
